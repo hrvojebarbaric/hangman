@@ -9,7 +9,7 @@ import Keyboard from './Keyboard/Keyboard'
 import { HangManStyled } from './HangMan.style'
 import Loader from '../../components/Loader/Loader'
 import StopWatch from '../../components/StopWatch/StopWatch'
-import { Link, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { createScore } from '../score/scoreSlice'
 
 const HangMan = () => {
