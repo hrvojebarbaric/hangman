@@ -72,7 +72,6 @@ const HangMan = () => {
             <div className="gallKeyWrapper">
                 <Gallows />
                 <Keyboard />
-                <Link to="/score">Score</Link>
             </div>
         </HangManStyled>
     )
