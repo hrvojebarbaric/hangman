@@ -64,7 +64,7 @@ const hangManSlice = createSlice({
 })
 
 export const getQuotes = createAsyncThunk('quotes/quotesAsync', async () => {
-    const response = await axios.get('http://api.quotable.io/random')
+    const response = await axios.get(import.meta.env.VITE_QUOTES_URL)
     return response.data
 })
 
