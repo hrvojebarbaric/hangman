@@ -43,22 +43,16 @@ const scoreSlice = createSlice({
 })
 
 export const createScore = createAsyncThunk('score/createScore', async (postData: CreateScore) => {
-    const response = await axios.post(
-        'https://my-json-server.typicode.com/stanko-ingemark/hang_the_wise_man_frontend_task/highscores',
-        postData,
-        {
-            headers: {
-                'Content-Type': 'application/json',
-            },
-        }
-    )
+    const response = await axios.post(import.meta.env.VITE_SCORE_URL, postData, {
+        headers: {
+            'Content-Type': 'application/json',
+        },
+    })
     return response.data
 })
 
 export const getScore = createAsyncThunk('score/getScore', async () => {
-    const response = await axios.get(
-        'https://my-json-server.typicode.com/stanko-ingemark/hang_the_wise_man_frontend_task/highscores'
-    )
+    const response = await axios.get(import.meta.env.VITE_SCORE_URL)
     return response.data
 })
 
