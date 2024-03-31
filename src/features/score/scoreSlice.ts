@@ -1,7 +1,12 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 import { CreateScore, InitalStateScore } from './Score.types'
 import axios from 'axios'
-import { STATUS_FAILED, STATUS_IDLE, STATUS_LOADING, STATUS_SUCCEEDED } from '../../utils/constants'
+import {
+    STATUS_FAILED,
+    STATUS_IDLE,
+    STATUS_LOADING,
+    STATUS_SUCCEEDED,
+} from '../../utils/state.constants'
 
 const initialState: InitalStateScore = {
     score: [],

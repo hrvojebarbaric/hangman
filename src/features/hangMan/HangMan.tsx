@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { AppDispatch, RootState } from '../../app/store'
 import { getQuotes, gameNextMove } from './hangManSlice'
 import { useEffect } from 'react'
-import { STATUS_FAILED, STATUS_LOADING } from '../../utils/constants'
+import { STATUS_FAILED, STATUS_LOADING } from '../../utils/state.constants'
 import { getUniqueCharacters, showLetters } from '../../utils/helpers'
 import Gallows from './Gallows/Gallows'
 import Keyboard from './Keyboard/Keyboard'
@@ -11,6 +11,7 @@ import Loader from '../../components/Loader/Loader'
 import StopWatch from '../../components/StopWatch/StopWatch'
 import { useNavigate } from 'react-router-dom'
 import { createScore } from '../score/scoreSlice'
+import { text } from '../../utils/text.constatns'
 
 const HangMan = () => {
     const {
@@ -62,7 +63,7 @@ const HangMan = () => {
     ])
 
     if (quoteStatus === STATUS_LOADING) return <Loader />
-    if (quoteStatus === STATUS_FAILED) return <p>Something went wrong...</p>
+    if (quoteStatus === STATUS_FAILED) return <p>{text.error}</p>
 
     return (
         <HangManStyled>

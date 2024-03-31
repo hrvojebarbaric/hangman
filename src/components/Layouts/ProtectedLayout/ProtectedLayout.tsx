@@ -16,6 +16,7 @@ import {
     resetUserInput,
     setDuration,
 } from '../../../features/hangMan/hangManSlice'
+import { text } from '../../../utils/text.constatns'
 
 const ProtectedLayout = () => {
     const user = useSelector((state: RootState) => state.user)
@@ -30,7 +31,7 @@ const ProtectedLayout = () => {
         <ProtectedLayoutStyled>
             <HeaderStyled>
                 <div className="content">
-                    <h1 className="title">Hangman game</h1>
+                    <h1 className="title">{text.user.title}</h1>
                     <div className="userContent">
                         <p>{`Hi ${user.userName}!`}</p>
                         <HeaderButtonStyled
