@@ -3,6 +3,7 @@ import { AppDispatch } from '../../app/store'
 import { setUserName } from './userSlice'
 import { useNavigate } from 'react-router-dom'
 import { LoginButtonStyled, UserStyled } from './User.style'
+import { text } from '../../utils/text.constatns'
 
 const User = () => {
     const dispatch = useDispatch<AppDispatch>()
@@ -17,11 +18,11 @@ const User = () => {
 
     return (
         <UserStyled>
-            <h1 className="title">Hangman game</h1>
+            <h1 className="title">{text.user.title}</h1>
             <form onSubmit={handleSubmit}>
-                <label>Please enter your name</label>
+                <label>{text.user.label}</label>
                 <input className="userName" type="text" name="username" required />
-                <LoginButtonStyled>Start game</LoginButtonStyled>
+                <LoginButtonStyled>{text.user.button}</LoginButtonStyled>
             </form>
         </UserStyled>
     )

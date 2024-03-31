@@ -1,7 +1,12 @@
 import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit'
 import { createAlphabetArray } from '../../utils/helpers'
 import axios from 'axios'
-import { STATUS_FAILED, STATUS_IDLE, STATUS_LOADING, STATUS_SUCCEEDED } from '../../utils/constants'
+import {
+    STATUS_FAILED,
+    STATUS_IDLE,
+    STATUS_LOADING,
+    STATUS_SUCCEEDED,
+} from '../../utils/state.constants'
 import { InitalStateHangMan } from './HangMan.types'
 
 const initialState: InitalStateHangMan = {

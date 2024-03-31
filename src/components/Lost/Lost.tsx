@@ -1,8 +1,10 @@
+import { text } from '../../utils/text.constatns'
+
 const Lost = () => {
     return (
         <div>
-            <h1>Sorry you lost!</h1>
-            <p>Please restart a game and try again.</p>
+            <h1>{text.lost.title}</h1>
+            <p>{text.lost.text}</p>
         </div>
     )
 }
